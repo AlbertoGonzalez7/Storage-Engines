@@ -125,7 +125,7 @@ Te aquesta mida inicial ja que així esta especificat, ho podem veure amb la seg
 
 ### 5. Quin/quins són els fitxers de dades? A on es troben i quina és la seva mida?
 
-Es troben a cd /var/lib/mysql/sakila
+Per defecte mysql guarda els fitxers a: /var/lib/mysql/(nom de la base de dades). Si entrem a la carpeta de la base de dades de sakila podem veure tots els fitxers que té:
 
 ![image](https://user-images.githubusercontent.com/101892290/169875444-2a4a4451-2987-4794-b6f5-e7fd5b35e68a.png)
 
@@ -136,18 +136,33 @@ Podem veure la seva mida i permisos amb la comanda ls -alis:
 ### 6. Canvia la configuració del MySQL per:
 
 
-#### o Canviar la localització del directori de dades a /hd-mysql/
+  #### o Canviar la localització del directori de dades a /hd-mysql/
 
-#### o Tenir dos fitxers corresponents al tablespace de sistema complint:
+  #### o Tenir dos fitxers corresponents al tablespace de sistema complint:
 
-#### ▪ Tots dos han de tenir la mateixa mida inicial (50MB)
+  #### ▪ Tots dos han de tenir la mateixa mida inicial (50MB)
 
-#### ▪ El tablespace ha de créixer de 5MB en 5MB.
+  #### ▪ El tablespace ha de créixer de 5MB en 5MB.
 
-#### ▪ Situa aquests fitxers en una nova localització simulant el següent:
+  #### ▪ Situa aquests fitxers en una nova localització simulant el següent:
 
-#### • /disk1/primer fitxer de dades → simularà un disc dur
-#### • /disk2/segon fitxer de dades → simularà un segon disc dur.
+  #### • /disk1/primer fitxer de dades → simularà un disc dur
+  #### • /disk2/segon fitxer de dades → simularà un segon disc dur.
+  
+  
+Primer, crearem la carpeta /hd-mysql/
+
+![image](https://user-images.githubusercontent.com/101892290/169876111-f426f5c0-55ba-4364-8fda-b9996b8a8c7d.png)
+
+També els disk's:
+
+![image](https://user-images.githubusercontent.com/101892290/169876686-bbed7d53-3b8a-47f4-9e32-cbb40e8d5f89.png)
+
+Després, hem d'escriure la següent configuració al fitxer de configuració del mysql.
+
+![image](https://user-images.githubusercontent.com/101892290/169876497-d6950982-8d0e-468f-8854-a6a68e541ee5.png)
+
+
 
 
 
