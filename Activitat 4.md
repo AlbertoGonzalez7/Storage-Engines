@@ -54,5 +54,51 @@ Entrem al Mysql i podrem observar que ja el tenim:
 
 ## ACTIVITAT 2 – STORAGE ENGINE CSV (0,5 punts)
 
+El motor d'emmagatzematge CSV emmagatzema dades en fitxers de text utilitzant el format de valors separats per comes.
+Quan es crea una CSV taula, el servidor crea un fitxer de dades de text sense format amb un nom que comença amb el nom de la taula i té una extensió .CSV. Quan emmagatzema dades a la taula, el motor d'emmagatzematge les desa al fitxer de dades en format de valors separats per comes
+
+### Exemple:
+
+Important: Hem de posar ENGINE = CSV;
+
+Part DDL,DML, creem 2 taules i afegim valors
+
+![image](https://user-images.githubusercontent.com/101892290/169872407-d305daeb-2ae1-4670-92e4-1bcfb9fde103.png)
+
+Si entrem a /var/lib/mysql, podem observar que el nostre fitxer s’ha guardat en format .CSV.
+
+Dintre del fitxer, están els valors que hem afegit separats per comes
+
+![image](https://user-images.githubusercontent.com/101892290/169872427-2f3f2a0e-1a69-4804-9832-2b7dd38dac8c.png)
+
+## ACTIVITAT 3 – STORAGE ENGINE MyRocks (1 punt)
+
+### 1. Documenta i posa exemple de com utilitzar ENGINE MyRocks. Crea una Base de dades amb 2 o 3 taules i insereix-hi contingut.
+
+### 2. Cal documentar els passos que has hagut de realitzar per preparar l'exemple: configuracions, instruccions DML, DDL, etc....
+
+MyRocks és una base de dades MySQL optimitzada per a l'espai i el rendiment d'escriptura
+
+### Exemple:
+
+Part de DDL i DML;
+
+Important, hem de posar ENGINE = RocksDB (i tenirla previamente instalada)
+
+![image](https://user-images.githubusercontent.com/101892290/169872737-0e082e2e-eaec-4311-ac4b-52239a04fcbc.png)
+
+### 3. A quin directori es guarden els fitxers de dades? Fes un llistat de a on són els fitxers i què ocupen.
+
+Es guarden en el directori cd /var/lib/mysql, y dintre de la nostre base de dades. Amb el format .sdi
+
+![image](https://user-images.githubusercontent.com/101892290/169872811-1b76c8a6-1da8-4874-9653-7f651bddf74b.png)
+
+
+### 4. Quina és la compressió per defecte que utilitza per les taules? Com ho faries per canviarlo. Per exemple utilitza Zlib o ZSTD o sense compressió.
+
+Están en format JSON
+
+
+
 
 
