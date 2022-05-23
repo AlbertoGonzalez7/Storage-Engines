@@ -100,3 +100,55 @@
 ## ACTIVITAT 4. INNODB part I. REALITZA ELS SEGÜENTS APARTATS (obligatòria) (2 punts)
 
 ### 1. Desactiva l’opció que ve per defecte de innodb_file_per_table
+
+* * Per desactivarla, hem d'entrar al my.cnf i possar innodb_file_per_table = 0. (Per activarla, = 1)
+
+![image](https://user-images.githubusercontent.com/101892290/169874241-7fa55e1e-cb90-42bf-8cbf-60bc2b52907d.png)
+
+### 2. Quins són els permisos i l'usuari i grup de la carpeta que conté el directori de dades (datadir)
+
+* * Per poder ver-los, hem d'entrar a cd /var/lib/mysql, i executar la comanda ls -alis per veure els permisos
+
+![image](https://user-images.githubusercontent.com/101892290/169874573-1275cc3c-f380-4a64-8386-da322dd6f2fa.png)
+
+### 3. Mostra quina és la mida del tablespace de sistema (System Tablespace). Per què té aquesta mida inicial?
+
+La mida inicial es la del ibdata1 (subrayat en groc)
+
+![image](https://user-images.githubusercontent.com/101892290/169875186-26b66252-fb67-47a8-81e2-1ff4201eab66.png)
+
+Te aquesta mida inicial ja que així esta especificat, ho podem veure amb la seguent comanda:
+
+![image](https://user-images.githubusercontent.com/101892290/169875294-370aa532-7699-43a1-b9fd-341812a98597.png)
+
+### 4. Importa la BD Sakila com a taules InnoDB (https://dev.mysql.com/doc/index-other.html)
+
+### 5. Quin/quins són els fitxers de dades? A on es troben i quina és la seva mida?
+
+Es troben a cd /var/lib/mysql/sakila
+
+![image](https://user-images.githubusercontent.com/101892290/169875444-2a4a4451-2987-4794-b6f5-e7fd5b35e68a.png)
+
+Podem veure la seva mida i permisos amb la comanda ls -alis:
+
+![image](https://user-images.githubusercontent.com/101892290/169875536-a0abc21e-3678-4be3-90e4-c5f0a04e53e6.png)
+
+### 6. Canvia la configuració del MySQL per:
+
+
+#### o Canviar la localització del directori de dades a /hd-mysql/
+
+#### o Tenir dos fitxers corresponents al tablespace de sistema complint:
+
+#### ▪ Tots dos han de tenir la mateixa mida inicial (50MB)
+
+#### ▪ El tablespace ha de créixer de 5MB en 5MB.
+
+#### ▪ Situa aquests fitxers en una nova localització simulant el següent:
+
+#### • /disk1/primer fitxer de dades → simularà un disc dur
+#### • /disk2/segon fitxer de dades → simularà un segon disc dur.
+
+
+
+
