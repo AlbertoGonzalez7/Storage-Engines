@@ -178,6 +178,12 @@ Primer hem de modificar la següent configuració (al my.cnf):
 
 ![image](https://user-images.githubusercontent.com/101892290/170362723-df700381-8602-44e3-b8f4-7dc50b19b2ee.png)
 
+Ara podem fer la seguent comanda a dins del Mysql per activar el file per table.
+
+![image](https://user-images.githubusercontent.com/101892290/170368058-386231af-f58e-41b0-8e65-f7c662d9846c.png)
+
+
+
 
 
 
