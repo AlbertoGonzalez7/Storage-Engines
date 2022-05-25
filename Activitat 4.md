@@ -218,6 +218,42 @@ Per últim hem de canviar el tablespace de cada taula per el nou que acabem de c
 
 ![image](https://user-images.githubusercontent.com/101892290/170384093-c5a240a9-db59-4c80-944d-4614ebf6bdaf.png)
 
+## ACTIVITAT 7. REDOLOG. REALITZA ELS SEGÜENTS APARTATS (2 punts)
+
+### 1. Com podem comprovar (Innodb Log Checkpointing):
+#### • LSN (Log Sequence Number)
+#### • L'últim LSN actualitzat a disc
+#### • Quin és l'últim LSN que se li ha fet Checkpoint
+
+El red log és una estructura de dades basada en el disc que s'utilitza durant la recuperació de fallades per corregir les dades escrites per transaccions incompletes
+
+Tot això ho podrem trobar executant la comanda:
+
+"SHOW ENGINE INNODB STATUS\G" I tenim que anar a buscar l'apartat de LOG
+
+![image](https://user-images.githubusercontent.com/101892290/170387454-bf2fe188-1cd5-4586-82ed-e2e4eb597abf.png)
+
+El LSN en el nostre cas és el 21111676 L'última que ha actualitzat a disc 21111676 I l'ultima checkpoint que ha fer és el 21111676
+
+### 2. Proposa un exemple a on es vegi l'ús del redolog
+
+Si per exemple posem que el innodb_log_file_size sigui de 50M:
+
+![image](https://user-images.githubusercontent.com/101892290/170388134-2046173f-310c-4b30-ba43-93322b5d2531.png)
+
+InnoDB detecta que la mida d'innodb_log_file_size difereix de la mida del fitxer de registre, escriu un punt de control de registre, tanca i elimina els fitxers de registre antics, crea nous fitxers de registre amb la mida sol·licitat i obre els nous fitxers de registre.
+
+![image](https://user-images.githubusercontent.com/101892290/170388215-fb671d38-f7d7-4d3f-8774-9936e75cb422.png)
+
+Com podem observar ha canviat, ara, per exemple, el nostre LSN es 21138774, quan abans era de 21111676
+
+### 3. Com podem mirar el número de pàgines modificades (dirty pages)? I el número total de pàgines?
+
+Utilitzem la mateixa comanda "SHOW ENGINE INNODB STATUS\G". En aquest cas tenim que buscar l'apartat de BUFFER POOL AND MEMORY
+
+![image](https://user-images.githubusercontent.com/101892290/170387692-9b5fe25b-9205-4bed-bc79-538f31b3999b.png)
+
+El numero total de pàgines es el Database pages 1055, Modified db pages són les pàgines pendents, en el meu cas no en tinc cap pendent.
 
 
 
