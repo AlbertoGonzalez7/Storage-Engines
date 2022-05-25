@@ -113,11 +113,11 @@
 
 ### 3. Mostra quina és la mida del tablespace de sistema (System Tablespace). Per què té aquesta mida inicial?
 
-La mida inicial es la del ibdata1 (subrayat en groc)
+* * La mida inicial es la del ibdata1 (subrayat en groc)
 
 ![image](https://user-images.githubusercontent.com/101892290/169875186-26b66252-fb67-47a8-81e2-1ff4201eab66.png)
 
-Te aquesta mida inicial ja que així esta especificat, ho podem veure amb la seguent comanda:
+* * Te aquesta mida inicial ja que així esta especificat, ho podem veure amb la seguent comanda:
 
 ![image](https://user-images.githubusercontent.com/101892290/169875294-370aa532-7699-43a1-b9fd-341812a98597.png)
 
@@ -125,11 +125,11 @@ Te aquesta mida inicial ja que així esta especificat, ho podem veure amb la seg
 
 ### 5. Quin/quins són els fitxers de dades? A on es troben i quina és la seva mida?
 
-Per defecte mysql guarda els fitxers a: /var/lib/mysql/(nom de la base de dades). Si entrem a la carpeta de la base de dades de sakila podem veure tots els fitxers que té:
+* * Per defecte mysql guarda els fitxers a: /var/lib/mysql/(nom de la base de dades). Si entrem a la carpeta de la base de dades de sakila podem veure tots els fitxers que té:
 
 ![image](https://user-images.githubusercontent.com/101892290/169875444-2a4a4451-2987-4794-b6f5-e7fd5b35e68a.png)
 
-Podem veure la seva mida i permisos amb la comanda ls -alis:
+* * Podem veure la seva mida i permisos amb la comanda ls -alis:
 
 ![image](https://user-images.githubusercontent.com/101892290/169875536-a0abc21e-3678-4be3-90e4-c5f0a04e53e6.png)
 
@@ -150,17 +150,30 @@ Podem veure la seva mida i permisos amb la comanda ls -alis:
   #### • /disk2/segon fitxer de dades → simularà un segon disc dur.
   
   
-Primer, crearem la carpeta /hd-mysql/
+* * Primer, crearem la carpeta /hd-mysql/
 
 ![image](https://user-images.githubusercontent.com/101892290/169876111-f426f5c0-55ba-4364-8fda-b9996b8a8c7d.png)
 
-També els disk's 1 i 2:
+* * També els disk's 1 i 2 (a l'arrel) i donem permisos:
 
-![image](https://user-images.githubusercontent.com/101892290/169876686-bbed7d53-3b8a-47f4-9e32-cbb40e8d5f89.png)
+![image](https://user-images.githubusercontent.com/101892290/170301757-564bf229-cdfa-4fd0-83ca-24808ac58f21.png)
 
-Després, hem d'escriure la següent configuració al fitxer de configuració del mysql.
+* * Després, hem d'escriure la següent configuració al fitxer de configuració del mysql.
 
-![image](https://user-images.githubusercontent.com/101892290/169876497-d6950982-8d0e-468f-8854-a6a68e541ee5.png)
+![image](https://user-images.githubusercontent.com/101892290/170302005-916236cd-0acf-484a-908b-da9664275c3d.png)
+
+* * I ja estaría, comprovació:
+
+![image](https://user-images.githubusercontent.com/101892290/170302082-13ff642f-28ac-4336-bf84-1512def949d3.png)
+
+![image](https://user-images.githubusercontent.com/101892290/170302108-6cb85c84-b274-416e-a1cc-8f65c8bcb828.png)
+
+## ACTIVITAT 5. INNODB part II. REALITZA ELS SEGÜENTS APARTATS (obligatòria) (1 punt)
+
+### 1. Partint de l'esquema anterior configura el Percona Server perquè cada taula generi el seu propi tablespace en una carpeta anomenada tspaces (aquesta pot estar situada a on vULgueu).
+
+#### Indica quins són els canvis de configuració que has realitzat
+
 
 
 
