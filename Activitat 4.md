@@ -174,6 +174,10 @@
 
 #### Indica quins són els canvis de configuració que has realitzat
 
+Creem la taula tspace
+
+![image](https://user-images.githubusercontent.com/101892290/170375839-bdc44d49-9304-4c86-b238-8477b205a8d3.png)
+
 Primer hem de modificar la següent configuració (al my.cnf):
 
 ![image](https://user-images.githubusercontent.com/101892290/170362723-df700381-8602-44e3-b8f4-7dc50b19b2ee.png)
@@ -181,6 +185,39 @@ Primer hem de modificar la següent configuració (al my.cnf):
 Ara podem fer la seguent comanda a dins del Mysql per activar el file per table.
 
 ![image](https://user-images.githubusercontent.com/101892290/170368058-386231af-f58e-41b0-8e65-f7c662d9846c.png)
+
+Com podem observar, els nostres tablespaces es generen per defecte en la ruta /var/lib/mysql/(nom de la bd)
+
+![image](https://user-images.githubusercontent.com/101892290/170376175-3a719687-3f10-4902-a378-90ebd7f48781.png)
+
+## ACTIVITAT 6. INNODB part III. REALITZA ELS SEGÜENTS APARTATS (obligatòria) (1 punt)
+
+### 1. Crea un tablespace anomenat 'ts1' situat a /discs-mysql/disc1/ i col·loca les taules actor, address i category de la BD Sakila.
+
+### 2. Crea un altre tablespace anomenat 'ts2' situat a /discs-mysql/disc2/ i col·loca-hi la resta de taules
+
+Creem primer els nostres dos disc's (disc1 i disc2)
+
+![image](https://user-images.githubusercontent.com/101892290/170383897-9d396acf-e6c6-4eb6-a135-752695d8ac3d.png)
+
+### 3. Comprova que pots realitzar operacions DML a les taules dels dos tablespaces.
+
+![image](https://user-images.githubusercontent.com/101892290/170383970-12f065c5-9353-4498-9342-63247b68f834.png)
+
+### 4. Quines comandes i configuracions has realitzat per fer els dos apartats anteriors?
+
+Primer, he creat les dues carpetes disc1 i disc2, despres, he canviat el arxiu de configuracio de my.cnf i he posat el seguent:
+
+![image](https://user-images.githubusercontent.com/101892290/170384015-954d4e66-3a9f-478a-b217-012210056ec7.png)
+
+Ara hem de crear els tablespaces.
+
+![image](https://user-images.githubusercontent.com/101892290/170384057-d2056e2c-1f28-43f0-8671-c00dcd58a56c.png)
+
+Per últim hem de canviar el tablespace de cada taula per el nou que acabem de crear.
+
+![image](https://user-images.githubusercontent.com/101892290/170384093-c5a240a9-db59-4c80-944d-4614ebf6bdaf.png)
+
 
 
 
