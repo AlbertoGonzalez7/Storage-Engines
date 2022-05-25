@@ -174,6 +174,12 @@
 
 #### Indica quins són els canvis de configuració que has realitzat
 
+Primer hem de modificar la següent configuració (al my.cnf):
+
+![image](https://user-images.githubusercontent.com/101892290/170362723-df700381-8602-44e3-b8f4-7dc50b19b2ee.png)
+
+
+
 
 
 
