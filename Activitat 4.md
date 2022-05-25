@@ -154,7 +154,7 @@ Primer, crearem la carpeta /hd-mysql/
 
 ![image](https://user-images.githubusercontent.com/101892290/169876111-f426f5c0-55ba-4364-8fda-b9996b8a8c7d.png)
 
-També els disk's:
+També els disk's 1 i 2:
 
 ![image](https://user-images.githubusercontent.com/101892290/169876686-bbed7d53-3b8a-47f4-9e32-cbb40e8d5f89.png)
 
