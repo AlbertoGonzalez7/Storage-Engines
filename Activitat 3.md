@@ -178,17 +178,19 @@
 
 ![image](https://user-images.githubusercontent.com/101892290/170375839-bdc44d49-9304-4c86-b238-8477b205a8d3.png)
 
-* * Primer hem de modificar la següent configuració (al my.cnf):
+* * Hem de modificar la següent configuració (al my.cnf):
 
-![image](https://user-images.githubusercontent.com/101892290/170362723-df700381-8602-44e3-b8f4-7dc50b19b2ee.png)
+![image](https://user-images.githubusercontent.com/101892290/170509447-3e87b58e-2277-4764-9649-14a63c7d01c9.png)
 
 * * Ara podem fer la seguent comanda a dins del Mysql per activar el file per table.
 
 ![image](https://user-images.githubusercontent.com/101892290/170368058-386231af-f58e-41b0-8e65-f7c662d9846c.png)
 
-* * Com podem observar, els nostres tablespaces es generen per defecte en la ruta /var/lib/mysql/(nom de la bd)
+* * Per que cada taula generi el seu propi tablespace en tspace, hem de posar que el ADD DATAFILE; apunti al nostre /tspace:
 
-![image](https://user-images.githubusercontent.com/101892290/170376175-3a719687-3f10-4902-a378-90ebd7f48781.png)
+![image](https://user-images.githubusercontent.com/101892290/170509404-976262af-97d1-4b32-be55-a2ab089cb5e8.png)
+
+* * I ja cada taula generarà el seu propi tablespace al directori on li diguem amb el ADD DATAFILE;
 
 ## ACTIVITAT 6. INNODB part III. REALITZA ELS SEGÜENTS APARTATS (obligatòria) (1 punt)
 
