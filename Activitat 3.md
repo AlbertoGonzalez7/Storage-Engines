@@ -160,7 +160,7 @@
 
 * * Després, hem d'escriure la següent configuració al fitxer de configuració del mysql.
 
-![image](https://user-images.githubusercontent.com/101892290/170302005-916236cd-0acf-484a-908b-da9664275c3d.png)
+![image](https://user-images.githubusercontent.com/101892290/170510864-a0be5acf-6053-4a73-bad6-ab53d511cd4f.png)
 
 * * I ja estaría, comprovació:
 
